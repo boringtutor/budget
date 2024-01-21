@@ -28,11 +28,13 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.3.1",
     "@types/eslint": "^8.44.7",
     "@types/node": "^18.17.0",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "enforce-unique": "^1.2.0",
     "@typescript-eslint/parser": "^6.11.0",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.54.0",
@@ -46,6 +48,9 @@
   },
   "ct3aMetadata": {
     "initVersion": "7.25.2"
+  },
+  "prisma": {
+    "seed": "npx tsx prisma/seed.ts"
   },
   "packageManager": "npm@9.8.1"
 }
