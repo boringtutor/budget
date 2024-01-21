@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { CreateUser } from "./_components/create-user";
+import { CreateTransaction } from "./_components/create-transaction";
 
 export default async function Home() {
   //const hello = await api.post.hello.query({ text: "from tRPC" });
@@ -12,6 +13,11 @@ export default async function Home() {
       </button>
 
       <CrudShowcase />
+
+      <br></br>
+      <br></br>
+
+      <TransactionShowcase />
     </main>
   );
 }
@@ -19,12 +25,15 @@ export default async function Home() {
 async function CrudShowcase() {
   return (
     <div className="w-full max-w-xs">
-      {/* {latestPost ? (
-        <p className="truncate">Your most recent post: {latestPost.name}</p>
-      ) : (
-        <p>You have no posts yet.</p>
-      )} */}
       <CreateUser />
+    </div>
+  );
+}
+
+async function TransactionShowcase() {
+  return (
+    <div className="w-full max-w-xs">
+      <CreateTransaction />
     </div>
   );
 }
